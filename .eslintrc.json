@@ -1,0 +1,73 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "jest"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      "error", {
+        "extensions": [
+          ".js",
+          ".jsx",
+          "ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "prettier/prettier": [
+      "error", {
+        "singleQuote": true,
+        "trailingComma": "all",
+        "arrowParens": "avoid"
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/no-unresolved": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-closing-tag-location": "off",
+    "react/jsx-curly-spacing": "off",
+    "react/jsx-equals-spacing": "off",
+    "react/jsx-first-prop-new-line": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-indent-props": "off",
+    "react/jsx-max-props-per-line": "off",
+    "react/jsx-tag-spacing": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/jsx-props-no-multi-spaces": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-curly-newline": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "class-methods-use-this": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  }
+}
