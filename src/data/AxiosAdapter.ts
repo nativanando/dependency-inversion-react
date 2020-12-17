@@ -6,15 +6,15 @@ import CustomHttpRequest from '../classes/CustomHttpRequest';
 import CustomHttpResponse from '../classes/CustomHttpResponse';
 
 class AxiosAdapter implements ICustomHttp {
-  public async get<T>(
-    customHttpRequest: CustomHttpRequest<T>,
+  public async get(
+    customHttpRequest: CustomHttpRequest,
   ): Promise<CustomHttpResponse> {
     const response = await axios.get(customHttpRequest.path);
     return new CustomHttpResponse(response.data, response.status);
   }
 
-  public async post<T>(
-    customHttpRequest: CustomHttpRequest<T>,
+  public async post(
+    customHttpRequest: CustomHttpRequest,
   ): Promise<CustomHttpResponse> {
     const response = await axios.post(
       customHttpRequest.path,
@@ -23,8 +23,8 @@ class AxiosAdapter implements ICustomHttp {
     return new CustomHttpResponse(response.data, response.status);
   }
 
-  public async put<T>(
-    customHttpRequest: CustomHttpRequest<T>,
+  public async put(
+    customHttpRequest: CustomHttpRequest,
   ): Promise<CustomHttpResponse> {
     const response = await axios.put(
       customHttpRequest.path,
@@ -33,8 +33,8 @@ class AxiosAdapter implements ICustomHttp {
     return new CustomHttpResponse(response.data, response.status);
   }
 
-  public async patch<T>(
-    customHttpRequest: CustomHttpRequest<T>,
+  public async patch(
+    customHttpRequest: CustomHttpRequest,
   ): Promise<CustomHttpResponse> {
     const response = await axios.patch(
       customHttpRequest.path,
@@ -43,8 +43,8 @@ class AxiosAdapter implements ICustomHttp {
     return new CustomHttpResponse(response.data, response.status);
   }
 
-  public async delete<T>(
-    customHttpRequest: CustomHttpRequest<T>,
+  public async delete(
+    customHttpRequest: CustomHttpRequest,
   ): Promise<CustomHttpResponse> {
     const response = await axios.delete(customHttpRequest.path);
     return new CustomHttpResponse(response.data, response.status);

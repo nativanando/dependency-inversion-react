@@ -1,7 +1,7 @@
-class CustomHttpRequest<T> {
+class CustomHttpRequest {
   public constructor(
     public path: string,
-    public params?: T,
+    public params?: any,
     public token?: string,
   ) {
     this.path = path;

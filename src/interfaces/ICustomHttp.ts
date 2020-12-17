@@ -1,20 +1,16 @@
-import HttpCustomRequest from '../classes/CustomHttpRequest';
-import HttpCustomResponse from '../classes/CustomHttpResponse';
+import CustomHttpRequest from '../classes/CustomHttpRequest';
+import CustomHttpResponse from '../classes/CustomHttpResponse';
 
 interface ICustomHttp {
-  get<T>(httpCustomRequest: HttpCustomRequest<T>): Promise<HttpCustomResponse>;
+  get(httpCustomRequest: CustomHttpRequest): Promise<CustomHttpResponse>;
 
-  post<T>(httpCustomRequest: HttpCustomRequest<T>): Promise<HttpCustomResponse>;
+  post(httpCustomRequest: CustomHttpRequest): Promise<CustomHttpResponse>;
 
-  put<T>(httpCustomRequest: HttpCustomRequest<T>): Promise<HttpCustomResponse>;
+  put(httpCustomRequest: CustomHttpRequest): Promise<CustomHttpResponse>;
 
-  patch<T>(
-    httpCustomRequest: HttpCustomRequest<T>,
-  ): Promise<HttpCustomResponse>;
+  patch(httpCustomRequest: CustomHttpRequest): Promise<CustomHttpResponse>;
 
-  delete<T>(
-    httpCustomRequest: HttpCustomRequest<T>,
-  ): Promise<HttpCustomResponse>;
+  delete(httpCustomRequest: CustomHttpRequest): Promise<CustomHttpResponse>;
 }
 
 export default ICustomHttp;
