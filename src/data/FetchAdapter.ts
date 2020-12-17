@@ -4,7 +4,7 @@ import CustomHttpRequest from '../classes/CustomHttpRequest';
 import CustomHttpResponse from '../classes/CustomHttpResponse';
 
 class FetchAdapter implements ICustomHttp {
-  public async get<T extends any>(
+  public async get<T>(
     customHttpRequest: CustomHttpRequest<T>,
   ): Promise<CustomHttpResponse> {
     const response = await fetch(customHttpRequest.path);
@@ -13,7 +13,7 @@ class FetchAdapter implements ICustomHttp {
     return new CustomHttpResponse(data, response.status);
   }
 
-  public async post<T extends any>(
+  public async post<T>(
     customHttpRequest: CustomHttpRequest<T>,
   ): Promise<CustomHttpResponse> {
     const response = await fetch(customHttpRequest.path, {
@@ -25,7 +25,7 @@ class FetchAdapter implements ICustomHttp {
     return new CustomHttpResponse(data, response.status);
   }
 
-  public async put<T extends any>(
+  public async put<T>(
     customHttpRequest: CustomHttpRequest<T>,
   ): Promise<CustomHttpResponse> {
     const response = await fetch(customHttpRequest.path, {
@@ -37,7 +37,7 @@ class FetchAdapter implements ICustomHttp {
     return new CustomHttpResponse(data, response.status);
   }
 
-  public async patch<T extends any>(
+  public async patch<T>(
     customHttpRequest: CustomHttpRequest<T>,
   ): Promise<CustomHttpResponse> {
     const response = await fetch(customHttpRequest.path, {
@@ -49,7 +49,7 @@ class FetchAdapter implements ICustomHttp {
     return new CustomHttpResponse(data, response.status);
   }
 
-  public async delete<T extends any>(
+  public async delete<T>(
     customHttpRequest: CustomHttpRequest<T>,
   ): Promise<CustomHttpResponse> {
     const response = await fetch(customHttpRequest.path, {
